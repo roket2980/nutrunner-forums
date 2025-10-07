@@ -1,194 +1,139 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>ANON-BOARD</title>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      background-color: black;
-      color: #00ff00;
-      font-family: 'Courier New', Courier, monospace;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
+<html lang="en">
+    <head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <script>
+        window.addEventListener('beforeunload', function (event) {
+            event.preventDefault();
+            event.returnValue = '';
+            return 'Are you sure you want to leave? Any unsaved changes will be lost.';
+        });
+    </script>
+    <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5521219086088837" crossorigin="anonymous"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WX5VS54ZDW"></script>
+    <meta name="google-adsense-account" content="ca-pub-5521219086088837">
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    .terminal {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      white-space: pre-wrap;
-    }
-
-    .green {
-      color: #00ff00;
-    }
-
-    .header {
-      text-align: center;
-      padding: 10px;
-      font-size: 1.5em;
-      text-shadow: 0 0 5px #00ff00;
-    }
-
-    .blink {
-      animation: blink 1s step-start infinite;
-    }
-
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-
-    .post-box, .thread-box {
-      border: 1px solid #00ff00;
-      padding: 10px;
-      margin-bottom: 20px;
-      background: rgba(0, 0, 0, 0.8);
-    }
-
-    textarea, input[type="text"], button {
-      background: black;
-      color: #00ff00;
-      border: 1px solid #00ff00;
-      padding: 5px;
-      font-family: monospace;
-      font-size: 1em;
-      width: 100%;
-      margin-top: 5px;
-    }
-
-    button {
-      cursor: pointer;
-    }
-
-    .thread {
-      margin-top: 10px;
-      padding: 10px;
-      border: 1px dashed #00ff00;
-    }
-
-    .timestamp {
-      font-size: 0.8em;
-      color: #00aa00;
-    }
-
-    a {
-      color: #00ff00;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    .matrix-fade {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: black;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5em;
-      animation: fadeOut 4s forwards;
-    }
-
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      95% { opacity: 0.2; }
-      100% { opacity: 0; display: none; }
-    }
-  </style>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-WX5VS54ZDW');
+    </script>
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-5521219086088837?ers=1"></script><script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+    <script src="https://cdn.jsdelivr.net/gh/gn-math/gn-math.github.io@main/gnmath.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gn-math</title>
+    <meta name="title" content="GN-Math">
+    <meta name="description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gn-math.github.io/">
+    <meta property="og:title" content="GN-Math">
+    <meta property="og:description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gn-math.github.io/">
+    <meta name="twitter:title" content="GN-Math">
+    <meta name="twitter:description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home.">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="matrix-fade">
-    <span class="green blink">Initializing forum shell...</span>
-  </div>
+<body class="dark-mode">
+    <header>
+        <div class="header-content">
+            <div class="logo">gn-math</div>
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search zones..." oninput="filterZones()">
+                <select id="sortOptions" onchange="sortZones()">
+                    <option value="name">Name</option>
+                    <option value="id">ID (Date)</option>
+                    <option value="popular">Popular</option>
+                </select>
+            </div>
+            <div class="control-buttons">
+                <button id="settings" style="background-color: var(--primary-color); color: white; border: none; border-radius: 4px; padding: 0.5rem 1rem; font-size: 16px; cursor: pointer;">Settings</button>
+            </div>
+        </div>
+    </header>
+    <ins class="adsbygoogle"
+    style="display:block; text-align:center;"
+    data-ad-client="ca-pub-5521219086088837"
+    data-ad-slot="5549138288"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+   <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
 
-  <div class="terminal">
-    <div class="header">ANON-BOARD // [ENTER] YOUR WHISPERS INTO THE VOID</div>
+    <main>
+        <details id="featuredZonesWrapper" open>
+            <summary id="allZonesSummary" style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">Featured Zones</summary>
+            <div id="featuredZones" class="zone-container"></div>
+        </details>
+        <br><hr><br>
+        <details id="allZonesWrapper" open>
+            <summary id="allSummary" style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">All Zones</summary>
+            <div id="container">Loading...</div>
+        </details>
+    </main>
 
-    <div class="post-box">
-      <h3 class="green">[+] Post Something</h3>
-      <input type="text" id="postTitle" placeholder="Thread title...">
-      <textarea id="postBody" placeholder="Say something anonymous..." rows="5"></textarea>
-      <button onclick="createPost()">Submit</button>
+    <div id="zoneViewer">
+        <div class="zone-header">
+            <div class="zone-title">
+                <h2 id="zoneName">zone</h2>
+                <span id="zoneId" style="display: none;"></span>
+                <a id="zoneAuthor" href="#" target="_blank">by Author</a>
+            </div>
+            <div class="zone-controls">
+                <button onclick="fullscreenZone()">Fullscreen</button>
+                <button onclick="aboutBlank()">Open in New Tab</button>
+                <button onclick="downloadZone()">Download</button>
+                <button onclick="closeZone()">Close</button>
+            </div>
+        </div>
+        <iframe id="zoneFrame"></iframe>
     </div>
 
-    <div class="thread-box">
-      <h3 class="green">[∞] Threads</h3>
-      <div id="threads"></div>
+    <div id="popupOverlay">
+        <div class="popup">
+            <div class="popup-header">
+                <h3 id="popupTitle">Title</h3>
+                <button id="popupClose" onclick="closePopup()">×</button>
+            </div>
+            <div id="popupBody">
+                Content will be here
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script>
-    let posts = JSON.parse(localStorage.getItem("anonThreads") || "[]");
-
-    function savePosts() {
-      localStorage.setItem("anonThreads", JSON.stringify(posts));
-    }
-
-    function createPost() {
-      const title = document.getElementById("postTitle").value.trim();
-      const body = document.getElementById("postBody").value.trim();
-      if (!title || !body) return alert("You must enter both a title and content.");
-
-      posts.unshift({
-        id: Date.now(),
-        title: title,
-        body: body,
-        replies: [],
-        timestamp: new Date().toLocaleString()
-      });
-
-      document.getElementById("postTitle").value = "";
-      document.getElementById("postBody").value = "";
-      savePosts();
-      renderThreads();
-    }
-
-    function replyToPost(id) {
-      const input = document.getElementById("reply_" + id).value.trim();
-      if (!input) return;
-      const post = posts.find(p => p.id === id);
-      post.replies.push({
-        text: input,
-        timestamp: new Date().toLocaleString()
-      });
-      savePosts();
-      renderThreads();
-    }
-
-    function renderThreads() {
-      const threadBox = document.getElementById("threads");
-      threadBox.innerHTML = "";
-
-      if (posts.length === 0) {
-        threadBox.innerHTML = "<p>No threads posted yet. Be the first.</p>";
-        return;
-      }
-
-      posts.forEach(post => {
-        const thread = document.createElement("div");
-        thread.className = "thread";
-        thread.innerHTML = `
-          <div><strong>[Thread]</strong> ${post.title}</div>
-          <div class="timestamp">${post.timestamp}</div>
-          <pre>${post.body}</pre>
-          <div><strong>Replies:</strong></div>
-          <ul>
-            ${post.replies.map(r => `<li>${r.text} <span class="timestamp">[${r.timestamp}]</span></li>`).join("")}
-          </ul>
-          <textarea id="reply_${post.id}" rows="2" placeholder="Reply..."></textarea>
-          <button onclick="replyToPost(${post.id})">Send</button>
-        `;
-        threadBox.appendChild(thread);
-      });
-    }
-
-    window.onload = () => {
-      renderThreads();
-    };
-  </script>
+    <ins class="adsbygoogle"
+    style="display:block; text-align:center;"
+    data-ad-client="ca-pub-5521219086088837"
+    data-ad-slot="5549138288"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+   <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+    <footer>
+        <div class="footer-links">
+            <a href="#" onclick="loadDMCA(); return false;">DMCA</a>
+            <a href="#" onclick="showContact(); return false;">Contact</a>
+            <a href="#" onclick="loadPrivacy(); return false;">Privacy Policy</a>
+            <a href="javascript:saveData()">Export Data</a>
+            <a href="#" onclick="document.getElementById('importData').click(); return false;">Import Data</a>
+            <input type="file" id="importData" style="display: none;" onchange="loadData(event)">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const search = new URLSearchParams(window.location.search);
+        const privacy = search.get('privacy');
+        if (privacy) {
+            loadPrivacy();
+        }
+    </script>
 </body>
 </html>
