@@ -1,4 +1,5 @@
 
+
 :root {
     --primary: #fc2651;
     --primary-hover: #e91e47;
@@ -604,3 +605,4 @@ footer {
         transform: translateY(-4px) scale(1.01);
     }
 }
+
