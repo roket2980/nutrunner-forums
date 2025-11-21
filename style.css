@@ -1,67 +1,69 @@
-
+/* Updated theme: black background + orange accents
+   Paste this entire file to replace the existing style.css
+*/
 
 :root {
-    --primary: #fc2651;
-    --primary-hover: #e91e47;
-    --primary-light: rgba(252, 38, 81, 0.1);
-    --primary-lighter: rgba(252, 38, 81, 0.05);
-    --accent: #8b5cf6;
-    --accent-light: rgba(139, 92, 246, 0.1);
+    --primary: #ff7a00;
+    --primary-hover: #ff8f33;
+    --primary-light: rgba(255, 122, 0, 0.10);
+    --primary-lighter: rgba(255, 122, 0, 0.05);
+    --accent: #ff7a00;
+    --accent-light: rgba(255, 122, 0, 0.10);
     --success: #10b981;
     --warning: #f59e0b;
-    --text: #1a1a1a;
-    --text-muted: #6b7280;
-    --text-light: #9ca3af;
-    --bg: #ffffff;
-    --bg-secondary: #f8fafc;
-    --surface: #ffffff;
-    --surface-hover: #f1f5f9;
-    --border: #e2e8f0;
-    --border-light: #f1f5f9;
-    --glass: rgba(255, 255, 255, 0.8);
-    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --shadow-glow: 0 0 20px rgba(252, 38, 81, 0.3);
+    --text: #ffffff;
+    --text-muted: #e6c29a;
+    --text-light: #cec6b8;
+    --bg: #000000;
+    --bg-secondary: #0b0b0b;
+    --surface: #0b0b0b;
+    --surface-hover: #141414;
+    --border: rgba(255, 255, 255, 0.06);
+    --border-light: rgba(255, 255, 255, 0.03);
+    --glass: rgba(255, 255, 255, 0.03);
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.85), 0 1px 2px -1px rgba(0, 0, 0, 0.85);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.85), 0 2px 4px -2px rgba(0, 0, 0, 0.85);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.86), 0 4px 6px -4px rgba(0, 0, 0, 0.86);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.87), 0 8px 10px -6px rgba(0, 0, 0, 0.87);
+    --shadow-glow: 0 0 20px rgba(255, 122, 0, 0.3);
     --radius: 12px;
     --radius-sm: 8px;
     --radius-lg: 16px;
     --radius-xl: 20px;
-    --gradient-primary: linear-gradient(135deg, #fc2651 0%, #e91e47 100%);
-    --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    --gradient-surface: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    --gradient-primary: linear-gradient(135deg, #000000 0%, #ff7a00 100%);
+    --gradient-accent: linear-gradient(135deg, #ff7a00 0%, #ff8f33 100%);
+    --gradient-surface: linear-gradient(135deg, #0b0b0b 0%, #141414 100%);
 }
 
 .dark-mode {
-    --primary: #fc2651;
-    --primary-hover: #ff4d75;
-    --primary-light: rgba(252, 38, 81, 0.15);
-    --primary-lighter: rgba(252, 38, 81, 0.08);
-    --accent: #a855f7;
-    --accent-light: rgba(168, 85, 247, 0.15);
+    --primary: #ff7a00;
+    --primary-hover: #ff8f33;
+    --primary-light: rgba(255, 122, 0, 0.15);
+    --primary-lighter: rgba(255, 122, 0, 0.08);
+    --accent: #ff7a00;
+    --accent-light: rgba(255, 122, 0, 0.15);
     --success: #34d399;
     --warning: #fbbf24;
     --text: #f1f5f9;
-    --text-muted: #94a3b8;
-    --text-light: #64748b;
-    --bg: #0f172a;
-    --bg-secondary: #1e293b;
-    --surface: #1e293b;
-    --surface-hover: #334155;
-    --border: #334155;
-    --border-light: #475569;
-    --glass: rgba(30, 41, 59, 0.8);
-    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.4);
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.5), 0 1px 2px -1px rgb(0 0 0 / 0.5);
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6), 0 4px 6px -4px rgb(0 0 0 / 0.6);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.7), 0 8px 10px -6px rgb(0 0 0 / 0.7);
-    --shadow-glow: 0 0 20px rgba(252, 38, 81, 0.4);
-    --gradient-primary: linear-gradient(135deg, #fc2651 0%, #ff4d75 100%);
-    --gradient-accent: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
-    --gradient-surface: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    --text-muted: #cbb48e;
+    --text-light: #9aa3ab;
+    --bg: #000000;
+    --bg-secondary: #0b0b0b;
+    --surface: #0b0b0b;
+    --surface-hover: #141414;
+    --border: rgba(255, 255, 255, 0.06);
+    --border-light: rgba(255, 255, 255, 0.03);
+    --glass: rgba(11, 11, 11, 0.8);
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.6);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.7), 0 1px 2px -1px rgba(0, 0, 0, 0.7);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.7), 0 2px 4px -2px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.75), 0 4px 6px -4px rgba(0, 0, 0, 0.75);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.8);
+    --shadow-glow: 0 0 20px rgba(255, 122, 0, 0.4);
+    --gradient-primary: linear-gradient(135deg, #000000 0%, #ff8f33 100%);
+    --gradient-accent: linear-gradient(135deg, #ff7a00 0%, #ff8f33 100%);
+    --gradient-surface: linear-gradient(135deg, #0b0b0b 0%, #141414 100%);
 }
 
 * {
@@ -83,7 +85,7 @@ body {
 
 header {
     background: var(--gradient-primary);
-    color: white;
+    color: var(--text);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -134,7 +136,7 @@ header {
 
 #searchBar:focus {
     background: var(--text);
-    box-shadow: 0 0 0 3px rgba(252, 38, 81, 0.25), var(--shadow);
+    box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.25), var(--shadow);
     transform: translateY(-1px);
     color: var(--glass);
 }
@@ -171,9 +173,9 @@ header {
 }
 
 #settings {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
     border: 0;
-    color: white;
+    color: var(--text);
     font-size: 1.2rem;
     cursor: pointer;
     padding: 0.75rem;
@@ -188,7 +190,7 @@ header {
 }
 
 #settings:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.10);
     transform: translateY(-1px);
     box-shadow: var(--shadow);
 }
@@ -292,7 +294,7 @@ main {
 
 .zone-item:hover button {
     color: var(--primary);
-    background: rgba(252, 38, 81, 0.05);
+    background: rgba(255, 122, 0, 0.05);
 }
 
 #zoneViewer {
@@ -316,7 +318,7 @@ main {
 
 .zone-header {
     background: var(--gradient-primary);
-    color: white;
+    color: var(--text);
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
@@ -349,7 +351,7 @@ main {
 }
 
 #zoneAuthor:hover {
-    color: white;
+    color: var(--text);
     text-decoration: underline;
 }
 
@@ -359,9 +361,9 @@ main {
 }
 
 .zone-controls button {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text);
     padding: 0.625rem 1rem;
     border-radius: var(--radius);
     cursor: pointer;
@@ -372,8 +374,8 @@ main {
 }
 
 .zone-controls button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
     box-shadow: var(--shadow);
 }
@@ -434,7 +436,7 @@ main {
 
 .popup-header {
     background: var(--gradient-primary);
-    color: white;
+    color: var(--text);
     padding: 1.25rem 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -448,9 +450,9 @@ main {
 }
 
 #popupClose {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
     border: 0;
-    color: white;
+    color: var(--text);
     font-size: 1.25rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -466,7 +468,7 @@ main {
 }
 
 #popupClose:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.10);
     transform: scale(1.1);
 }
 
@@ -493,7 +495,7 @@ main {
 #popupBody input[type="text"]:focus,
 #popupBody input[type="file"]:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(252, 38, 81, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.10);
     transform: translateY(-1px);
 }
 
@@ -501,7 +503,7 @@ main {
     width: 100%;
     padding: 0.875rem 1rem;
     background: var(--gradient-primary);
-    color: white;
+    color: var(--text);
     border: 0;
     border-radius: var(--radius);
     cursor: pointer;
@@ -605,4 +607,3 @@ footer {
         transform: translateY(-4px) scale(1.01);
     }
 }
-
