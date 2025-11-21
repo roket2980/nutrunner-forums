@@ -3,7 +3,9 @@
 */
 
 :root {
+    /* Black background + Orange accents */
     --primary: #ff7a00;
+    --primary-color: #ff7a00; /* alias used in some inline styles */
     --primary-hover: #ff8f33;
     --primary-light: rgba(255, 122, 0, 0.10);
     --primary-lighter: rgba(255, 122, 0, 0.05);
@@ -38,6 +40,7 @@
 
 .dark-mode {
     --primary: #ff7a00;
+    --primary-color: #ff7a00;
     --primary-hover: #ff8f33;
     --primary-light: rgba(255, 122, 0, 0.15);
     --primary-lighter: rgba(255, 122, 0, 0.08);
@@ -65,7 +68,6 @@
     --gradient-accent: linear-gradient(135deg, #ff7a00 0%, #ff8f33 100%);
     --gradient-surface: linear-gradient(135deg, #0b0b0b 0%, #141414 100%);
 }
-
 * {
     box-sizing: border-box;
 }
