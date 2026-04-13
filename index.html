@@ -46,16 +46,16 @@
     --accent-light: rgba(139, 92, 246, 0.1);
     --success: #10b981;
     --warning: #f59e0b;
-    --text: #1a1a1a;
-    --text-muted: #6b7280;
-    --text-light: #9ca3af;
-    --bg: #ffffff;
-    --bg-secondary: #f8fafc;
-    --surface: #ffffff;
-    --surface-hover: #f1f5f9;
-    --border: #e2e8f0;
-    --border-light: #f1f5f9;
-    --glass: rgba(255, 255, 255, 0.8);
+    --text: #ffffff; /* Changed to white for contrast on new background */
+    --text-muted: #e0e0e0;
+    --text-light: #b0b0b0;
+    --bg: #6A5ACD; /* MAIN BACKGROUND COLOR CHANGED */
+    --bg-secondary: #5c4eb6; /* Slightly darker for contrast */
+    --surface: #7a6cd6; /* Lighter for cards */
+    --surface-hover: #897ae0;
+    --border: #9e94db; /* Lighter border for visibility */
+    --border-light: #7e6fd6;
+    --glass: rgba(255, 255, 255, 0.2);
     --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -68,7 +68,7 @@
     --radius-xl: 20px;
     --gradient-primary: linear-gradient(135deg, #fc2651 0%, #e91e47 100%);
     --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    --gradient-surface: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    --gradient-surface: linear-gradient(135deg, #7a6cd6 0%, #6A5ACD 100%);
 }
 
 .dark-mode {
@@ -80,16 +80,16 @@
     --accent-light: rgba(168, 85, 247, 0.15);
     --success: #34d399;
     --warning: #fbbf24;
-    --text: #f1f5f9;
-    --text-muted: #94a3b8;
-    --text-light: #64748b;
-    --bg: #0f172a;
-    --bg-secondary: #1e293b;
-    --surface: #1e293b;
-    --surface-hover: #334155;
-    --border: #334155;
-    --border-light: #475569;
-    --glass: rgba(30, 41, 59, 0.8);
+    --text: #ffffff; /* Kept white for contrast */
+    --text-muted: #e0e0e0;
+    --text-light: #b0b0b0;
+    --bg: #6A5ACD; /* MAIN BACKGROUND COLOR CHANGED */
+    --bg-secondary: #5c4eb6; /* Slightly darker for contrast */
+    --surface: #7a6cd6; /* Lighter for cards */
+    --surface-hover: #897ae0;
+    --border: #9e94db; /* Lighter border for visibility */
+    --border-light: #8e85dc;
+    --glass: rgba(255, 255, 255, 0.15);
     --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.4);
     --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.5), 0 1px 2px -1px rgb(0 0 0 / 0.5);
     --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
@@ -98,7 +98,7 @@
     --shadow-glow: 0 0 20px rgba(252, 38, 81, 0.4);
     --gradient-primary: linear-gradient(135deg, #fc2651 0%, #ff4d75 100%);
     --gradient-accent: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
-    --gradient-surface: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    --gradient-surface: linear-gradient(135deg, #7a6cd6 0%, #6A5ACD 100%);
 }
 
 * {
@@ -173,7 +173,7 @@ header {
     background: var(--text);
     box-shadow: 0 0 0 3px rgba(252, 38, 81, 0.25), var(--shadow);
     transform: translateY(-1px);
-    color: var(--glass);
+    color: var(--bg); /* Invert color on focus for contrast */
 }
 
 #searchBar::placeholder {
@@ -186,7 +186,7 @@ header {
     border-radius: var(--radius);
     background: var(--glass);
     backdrop-filter: blur(20px);
-    color: var(--text-muted);
+    color: var(--text);
     font-size: 15px;
     cursor: pointer;
     outline: none;
@@ -199,7 +199,7 @@ header {
     background: var(--text);
     transform: translateY(-1px);
     box-shadow: var(--shadow);
-    color: var(--glass);
+    color: var(--bg); /* Invert color on hover */
 }
 
 #filterOptions {
@@ -208,7 +208,7 @@ header {
     border-radius: var(--radius);
     background: var(--glass);
     backdrop-filter: blur(20px);
-    color: var(--text-muted);
+    color: var(--text);
     font-size: 15px;
     cursor: pointer;
     outline: none;
@@ -221,7 +221,7 @@ header {
     background: var(--text);
     transform: translateY(-1px);
     box-shadow: var(--shadow);
-    color: var(--glass);
+    color: var(--bg); /* Invert color on hover */
 }
 
 .control-buttons {
@@ -554,7 +554,7 @@ footer {
 }
 
 .footer-links a {
-    color: var(--primary);
+    color: #fff; /* Changed to white for better contrast on purple footer */
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
@@ -744,7 +744,7 @@ footer {
             </div>
         </div>
     </header>
-	<main>
+    <main>
 </div>
     <br>
         <details id="featuredZonesWrapper" open>
